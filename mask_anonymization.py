@@ -7,4 +7,5 @@ Anonymize tweets by replacing words to maximize the anonymization
 
 from transformers import pipeline
 unmasker = pipeline('fill-mask', model='bert-base-uncased')
-unmasker("Hello I'm a [MASK] model.")
+opts = unmasker("Hello I'm a [MASK] model.")
+print(opts)
